@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+  background-color: white;
+  line-height: 1.1;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+  background-color: #1E213F;
+  overflow-x: hidden;
+}
+
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+
+}
+
+.active {
+  background-color: #F87070;
+}
+
+.wrapper {
+  background-color: #161932;
+  border: transparent;
+  border-radius: 3rem;
+  width: 100%;
+  padding: 2rem;
+  max-width: 25rem;
+  text-align: center;
+
+}
+
+a {
+  color: #D7E0FF;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+a.active {
+  border: transparent;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  width: 5rem;
+  background-color: #F87070;
+}
+
+.item_timer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+
+.outer-circle {
+
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+  box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  border-radius: 50%;
+  height: 89%;
+  width: 89%;
+  background: #161932;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-circle {
+  border-radius: 50%;
+  border: solid 10px transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  width: 92.6%;
+  height: 92.6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.time {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 99px;
+  text-align: center;
+  letter-spacing: -4px;
+}
+
+.nodisplay {
+  display: none;
+}
+
+.option-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  position: relative;
+  top: -4rem;
+  left: 2rem;
+
+}
+
+.pause {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 13.125px;
+}
+
+.settings {
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.settings-modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 46px;
+  width: 327px;
+  height: 549px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  color: #161932;
+  z-index: 1000;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 8rem;
+  }
+
+  .outer-circle {
+    width: 177px;
+    height: 177px;
+  }
+
+  .time {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .minutes {
+    padding: 0.3rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .seconds {
+    padding: 0.6rem;
+    letter-spacing: 0.1rem;
+  }
+
+
+  .pause {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .option-panel {
+    font-size: 1.6rem;
+    margin-left: -2.5rem;
+  }
+}

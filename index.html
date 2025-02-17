@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Pomodoro app</title>
+</head>
+
+<body>
+  <div class="buttons">
+    <div class="wrapper" id="wrapper">
+      <a class="active">Pomodoro</a>
+      <a>short break</a>
+      <a>long break</a>
+
+    </div>
+  </div>
+  <div class="item_timer">
+    <div class="outer-circle">
+      <div class="inner-circle">
+        <div class="timer-circle">
+          <div class="timer" id="timer">
+            <h2 class="time timer-pomodoro"><span class="minutes">25</span>:<span class="seconds">00</span></h2>
+            <h2 class="time timer-short nodisplay"><span class="minutes">5</span>:<span class="seconds">00</span></h2>
+            <h2 class="time timer-long nodisplay"><span class="minutes">15</span>:<span class="seconds">00</span></h2>
+            <div class="option-panel">
+              <h3 class="pause">START</h3>
+              <svg class="reset" width="30px" height="30px" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke="#D7E0FF" stroke-linecap="round" stroke-linejoin="round"
+                  transform="matrix(0 1 1 0 2.5 2.5)">
+                  <path
+                    d="m3.98652376 1.07807068c-2.38377179 1.38514556-3.98652376 3.96636605-3.98652376 6.92192932 0 4.418278 3.581722 8 8 8s8-3.581722 8-8-3.581722-8-8-8">
+                  </path>
+                  <path d="m4 1v4h-4" transform="matrix(1 0 0 -1 0 6)"></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="settings-modal hidden">
+      <div class="header-modal">
+        <p>Settings</p>
+        <svg class="close" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+          <path fill="currentcolor" fill-rule="evenodd"
+            d="M11.95.636l1.414 1.414L8.414 7l4.95 4.95-1.414 1.414L7 8.414l-4.95 4.95L.636 11.95 5.586 7 .636 2.05 2.05.636 7 5.586l4.95-4.95z"
+            opacity=".5"></path>
+        </svg>
+      </div>
+      <h4 class="time-header time-minutes">TIME ( MINUTES )</h4>
+      <div class="time-container">
+        <div class="time-panel time-pomodoro">
+          <p class="time-setting">pomodoro</p>
+          <div class="wrapper">
+            <p>25</p>
+            <div class="select-panel">
+              <svg class="up" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                <path fill="none" stroke="#1E213F" stroke-width="2" d="M1 6l6-4 6 4"></path>
+              </svg>
+              <svg class="down" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                <path fill="none" stroke="#1E213F" stroke-width="2" d="M1 1l6 4 6-4"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="time-panel time-shortbreak">
+          <p class="time-setting">short break</p>
+          <div class="wrapper">
+            <p>5</p>
+            <div class="select-panel">
+              <svg class="up" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                <path fill="none" stroke="#1E213F" stroke-width="2" d="M1 6l6-4 6 4"></path>
+              </svg>
+              <svg class="down" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                <path fill="none" stroke="#1E213F" stroke-width="2" d="M1 1l6 4 6-4"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="time-panel time-longbreak">
+          <p class="time-setting">long break</p>
+          <div class="wrapper">
+            <p>15</p>
+            <div class="select-panel">
+              <svg class="up" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                <path fill="none" stroke="#1E213F" stroke-width="2" d="M1 6l6-4 6 4"></path>
+              </svg>
+              <svg class="down" xmlns="http://www.w3.org/2000/svg" width="14" height="7">
+                <path fill="none" stroke="#1E213F" stroke-width="2" d="M1 1l6 4 6-4"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container font-container">
+        <h4 class="time-header">FONT</h4>
+        <div class="panel fonts-panel">
+          <div class="box box-kumbh active-font">Aa</div>
+          <div class="box box-roboto ">Aa</div>
+          <div class="box box-space">Aa</div>
+        </div>
+      </div>
+      <div class="container color-container">
+        <h4 class="time-header">COLOR</h4>
+        <div class="panel color-panel">
+          <div class="box box-red active-color">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="13px" height="13px">
+              <path
+                d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z">
+              </path>
+            </svg>
+          </div>
+          <div class="box box-turquoise">
+            <svg class="checkmark hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="13px"
+              height="13px">
+              <path
+                d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z">
+              </path>
+            </svg>
+          </div>
+          <div class="box box-purple">
+            <svg class="checkmark hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="13px"
+              height="13px">
+              <path
+                d="M 26.980469 5.9902344 A 1.0001 1.0001 0 0 0 26.292969 6.2929688 L 11 21.585938 L 4.7070312 15.292969 A 1.0001 1.0001 0 1 0 3.2929688 16.707031 L 10.292969 23.707031 A 1.0001 1.0001 0 0 0 11.707031 23.707031 L 27.707031 7.7070312 A 1.0001 1.0001 0 0 0 26.980469 5.9902344 z">
+              </path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <button class="apply-button">Apply</button>
+    </div>
+
+  </div>
+  <div class="settings">
+    <svg class="settings" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+      <path fill="#D7E0FF"
+        d="M26.965 17.682l-2.927-2.317c.055-.448.097-.903.097-1.365 0-.462-.042-.917-.097-1.365l2.934-2.317a.702.702 0 00.167-.896l-2.775-4.851a.683.683 0 00-.847-.301l-3.454 1.407a10.506 10.506 0 00-2.345-1.379l-.52-3.71A.716.716 0 0016.503 0h-5.55a.703.703 0 00-.687.588l-.52 3.71c-.847.357-1.63.819-2.345 1.379L3.947 4.27a.691.691 0 00-.847.301L.325 9.422a.705.705 0 00.167.896l2.927 2.317c-.055.448-.097.903-.097 1.365 0 .462.042.917.097 1.365L.492 17.682a.702.702 0 00-.167.896L3.1 23.429a.683.683 0 00.847.301L7.4 22.323a10.506 10.506 0 002.345 1.379l.52 3.71c.056.329.34.588.687.588h5.55a.703.703 0 00.687-.588l.52-3.71c.847-.357 1.631-.819 2.346-1.379l3.454 1.407c.313.119.673 0 .847-.301l2.775-4.851a.705.705 0 00-.167-.896zM13.73 18.9c-2.685 0-4.857-2.191-4.857-4.9 0-2.709 2.172-4.9 4.857-4.9 2.684 0 4.856 2.191 4.856 4.9 0 2.71-2.172 4.9-4.856 4.9z">
+      </path>
+    </svg>
+  </div>
+
+
+
+
+
+
+
+  <script src="js/script.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>
