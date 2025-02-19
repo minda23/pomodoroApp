@@ -30,7 +30,7 @@ body {
   border: transparent;
   border-radius: 3rem;
   width: 100%;
-  padding: 2rem;
+  padding: 3rem;
   max-width: 25rem;
   text-align: center;
 
@@ -44,7 +44,6 @@ a {
 
 a.active {
   border: transparent;
-  padding: 1.5rem;
   border-radius: 3rem;
   width: 5rem;
   background-color: #F87070;
