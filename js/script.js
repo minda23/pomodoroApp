@@ -6,8 +6,8 @@ const timer = {
     longbreak: 15,
     longbreakinterval: 4
 
-ccc
 }
+
 
 
 
